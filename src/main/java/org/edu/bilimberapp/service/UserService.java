@@ -1,6 +1,7 @@
 package org.edu.bilimberapp.service;
 
 import lombok.RequiredArgsConstructor;
+import org.edu.bilimberapp.dto.UserInformation;
 import org.edu.bilimberapp.entity.User;
 import org.edu.bilimberapp.repository.UserRepository;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -40,7 +41,22 @@ public class UserService {
         return getByUsername(username);
     }
 
+    public User updateVerificationState(boolean verified,User user){
+        user.setVerified(verified);
+        return userRepository.save(user);
+    }
+
     public UserDetailsService userDetailsService() {
         return this::getByUsername;
+    }
+
+    public UserInformation getUserInformation(){
+        var userInfo = new UserInformation();
+        userInfo.setUsername(getCurrentUser().getUsername());
+        userInfo.setEmail(getCurrentUser().getEmail());
+        userInfo.setPhone(getCurrentUser().getPhone());
+        userInfo.setCity(getCurrentUser().getCity());
+        userInfo.setAge(getCurrentUser().getAge());
+        return userInfo;
     }
 }

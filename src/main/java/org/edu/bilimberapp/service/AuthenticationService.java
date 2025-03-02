@@ -41,6 +41,7 @@ public class AuthenticationService {
         var user = userService.getByEmail(verificationCode.getEmail());
         if(verificationCode.getCode().equals(user.getVerificationCode())){
             var jwt = jwtService.generateToken(user);
+            userService.updateVerificationState(true,user);
             return new JwtAuthenticationResponse(jwt);
         }
         else{

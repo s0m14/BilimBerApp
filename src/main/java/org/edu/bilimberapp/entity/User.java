@@ -36,8 +36,14 @@ public class User implements UserDetails {
     @Column(name= "phone")
     private short phone;
 
+    @Column
+    private String city;
+
     @Column(name = "email")
     private String email;
+
+    @Column(name = "age")
+    private int age;
 
     @Column(name="verification_code")
     private String verificationCode;
