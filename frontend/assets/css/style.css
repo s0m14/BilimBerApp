@@ -1,0 +1,154 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-image: url("../images/background.jpeg"); 
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cover {
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+}
+
+.bilimber {
+  text-align: center;
+  justify-content: center;
+}
+
+.form-box {
+  position: relative;
+  display: flex;
+  width: 90%;
+  max-width: 800px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo-box {
+  flex: 1;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.logo-box img {
+  width: 100%;
+  max-width: 200px;
+}
+
+.form-content {
+  flex: 1.3;
+  padding: 30px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h2 {
+  text-align: left;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.tabs {
+  display: flex;
+  gap: 15px;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.tab {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.tab.active {
+  opacity: 1;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 12px;
+  margin: 10px 0 5px;
+}
+
+input {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  font-size: 14px;
+  outline: none;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px;
+  background: #007bff;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.signin-text {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 12px;
+}
+
+.signin-text a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.signin-text a:hover {
+  text-decoration: underline;
+}

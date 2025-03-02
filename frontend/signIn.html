@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BilimBer SIGN IN</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="cover"></div>
+      <div class="form-box">
+        <div class="logo-box">
+          <img src="assets/images/logo.png" alt="Logo" />
+        </div>
+        <div class="form-content">
+          <h2 class="bilimber">BilimBer</h2>
+          <div class="tabs">
+            <span class="tab">SIGN IN</span>
+            <span class="tab active">SIGN UP</span>
+          </div>
+          <form id="signin-form">
+            <label>EMAIL</label>
+            <input id="email" type="email" required />
+
+            <label>PASSWORD</label>
+            <input id="password" type="password" required />
+
+            <button type="submit">SIGN IN</button>
+          </form>
+          <p class="signin-text">have an account? <a href="#">SIGN IN</a></p>
+          <p id="message" class="message"></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/js/signIn.js"></script>
+  </body>
+</html>
